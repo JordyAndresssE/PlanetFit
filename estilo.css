@@ -5,6 +5,11 @@ body, h1, h2, h3, p, ul, li, a {
   box-sizing: border-box;
 }
 
+.logo-text {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif /* Cambia "TuTipoDeLetra" por el nombre de la fuente que desees */
+  /* Otros estilos si los necesitas */
+}
+
 body {
   font-family: Helvetica, sans-serif;
   background-color: #f4f4f4;
@@ -107,4 +112,123 @@ footer {
 
 footer p {
   font-size: 14px;
+}
+
+/* Estilos para la sección de productos */
+.productos {
+  background-color: #f9f9f9;
+  padding: 50px 0;
+}
+
+.productos .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.producto {
+  width: 300px;
+  margin: 20px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.producto img {
+  width: 100%;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.producto h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.producto p {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #008000;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.btn:hover {
+  background-color: #006400;
+}
+
+/* Estilos para el apartado "Nosotros" */
+.nosotros {
+  background-color: #f9f9f9;
+  padding: 50px 0;
+}
+
+.nosotros .container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.nosotros h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.descripcion {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.descripcion p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.contacto {
+  text-align: center;
+  padding: 50px 0;
+}
+
+.contacto form {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.contacto input,
+.contacto textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+.contacto button {
+  background-color: #008000;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.contacto button:hover {
+  background-color: #006400;
+}
+
+#respuesta {
+  margin-top: 20px;
+  font-weight: bold;
 }

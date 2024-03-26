@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planet Fit</title>
+    <link rel="stylesheet" type="text/css" href="estilo.css">
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <div class="logo">
+            <img src="img/logo.png" alt="Logo Planet Fit">
+            <h1 class="logo-text">Planet Fit</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<section class="contacto">
+    <div class="container">
+        <h2>Contacto</h2>
+        <form id="contacto-form" action="https://formspree.io/f/xeqyrqod" method="post" onsubmit="return validarFormulario()">
+            <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
+            <input type="email" id="correo" name="correo" placeholder="Correo electrónico" required>
+            <textarea id="mensaje" name="mensaje" placeholder="Mensaje" required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+        <div id="respuesta"></div>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <div class="redes-sociales">
+            <a href="https://www.tiktok.com/@planet_fit?_t=8kzMgyLPILV&_r=1" target="_blank"><img src="img/tiktok.png" alt="TikTok" style="width: 40px; height: 40px;"></a>
+            <a href="https://www.instagram.com/planet_fit_nutrition?igsh=MXhteXB2cWxkM2pxZQ%3D%3D&utm_source=qr" target="_blank"><img src="img/instagram.png" alt="Instagram" style="width: 40px; height: 40px;"></a>
+        </div>
+        <p>&copy; 2024 Planet Fit. Todos los derechos reservados.</p>
+    </div>
+</footer>
+
+<script>
+    function validarFormulario() {
+        var nombre = document.getElementById('nombre').value.trim();
+        var correo = document.getElementById('correo').value.trim();
+        var mensaje = document.getElementById('mensaje').value.trim();
+        var respuesta = document.getElementById('respuesta');
+
+        // Validación de campos
+        if (nombre === '' || correo === '' || mensaje === '') {
+            respuesta.innerHTML = 'Por favor, completa todos los campos.';
+            respuesta.style.color = 'red';
+            return false;
+        }
+
+        // Validación de correo electrónico usando una expresión regular simple
+        var correoRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!correoRegex.test(correo)) {
+            respuesta.innerHTML = 'Por favor, ingresa un correo electrónico válido.';
+            respuesta.style.color = 'red';
+            return false;
+        }
+
+        // Si la validación es exitosa, muestra un mensaje de éxito
+        respuesta.innerHTML = '¡Mensaje enviado!';
+        respuesta.style.color = 'green';
+        return false; // Esto evita que el formulario se envíe realmente, ya que este es solo un ejemplo de demostración
+    }
+</script>
+
+</body>
+</html>
