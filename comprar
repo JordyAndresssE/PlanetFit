@@ -13,22 +13,28 @@
 </head>
 <body>
 
-<header>
-    <div class="container">
-        <div class="logo">
-            <img src="img/logo.png" alt="Logo Planet Fit">
-            <h1 class="logo-text">Planet Fit</h1>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="img/logo.png" alt="Logo Planet Fit">
+                <h1 class="logo-text">Planet Fit</h1>
+            </div>
+            <nav>
+                <div class="menu-icon">
+                    <!-- Icono de hamburguesa -->
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+                <ul class="menu">
+                    <li><a href="index.html"><b>Inicio</b></a></li>
+                    <li><a href="productos.html"><b>Productos</b></a></li>
+                    <li><a href="nosotros.html"><b>Nosotros</b></a></li>
+                    <li><a href="contacto.html"><b>Contacto</b></a></li>
+                </ul>
+            </nav>
         </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="productos.html">Productos</a></li>
-                <li><a href="nosotros.html">Nosotros</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-            </ul>
-        </nav>
-    </div>
-</header>
+    </header>
 
 <section class="comprar">
     <div class="container">
@@ -45,6 +51,12 @@
         <p>&copy; 2024 Planet Fit. Todos los derechos reservados.</p>
     </div>
 </footer>
+
+<script>
+    document.querySelector('.menu-icon').addEventListener('click', function() {
+        document.querySelector('.menu').classList.toggle('active');
+    });
+</script>
 
 </body>
 </html>
