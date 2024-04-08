@@ -15,11 +15,17 @@
             <h1 class="logo-text">Planet Fit</h1>
         </div>
         <nav>
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="productos.html">Productos</a></li>
-                <li><a href="nosotros.html">Nosotros</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
+            <div class="menu-icon">
+                <!-- Icono de hamburguesa -->
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <ul class="menu">
+                <li><a href="index.html"><b>Inicio</b></a></li>
+                <li><a href="productos.html"><b>Productos</b></a></li>
+                <li><a href="nosotros.html"><b>Nosotros</b></a></li>
+                <li><a href="contacto.html"><b>Contacto</b></a></li>
             </ul>
         </nav>
     </div>
@@ -30,7 +36,7 @@
         <h2>Sobre Nosotros</h2>
         <div class="descripcion">
             <p>Somos Planet Fit, una empresa comprometida con la salud y el bienestar de nuestros clientes. Desde nuestro inicio, nos dedicamos a proporcionar productos y servicios de calidad para ayudar a las personas a alcanzar sus objetivos de fitness y mantener un estilo de vida saludable.</p>
-            <p>Nuestro equipo está formado por expertos en fitness y nutrición, apasionados por ayudar a otros a alcanzar su máximo potencial. Nos esforzamos por ofrecer productos innovadores y soluciones personalizadas que se adapten a las necesidades individuales de cada cliente.</p>
+            <p>Nos esforzamos por ofrecer productos innovadores y soluciones personalizadas que se adapten a las necesidades individuales de cada cliente.</p>
             <p>En Planet Fit, creemos en la importancia del equilibrio entre el ejercicio, la nutrición adecuada y el bienestar mental. Nos comprometemos a brindar el apoyo y la motivación necesarios para que nuestros clientes logren sus metas y vivan una vida activa y saludable.</p>
         </div>
     </div>
@@ -41,6 +47,12 @@
         <p>&copy; 2024 Planet Fit. Todos los derechos reservados.</p>
     </div>
 </footer>
+
+<script>
+    document.querySelector('.menu-icon').addEventListener('click', function() {
+        document.querySelector('.menu').classList.toggle('active');
+    });
+</script>
 
 </body>
 </html>
